@@ -5,13 +5,13 @@ if(location.pathname == '/'){
 }
 if(location.pathname.startsWith('/watch')){
     toggleVisibility('#related')
-    toggleVisibility('#secondary')
+     toggleVisibility('#related')
     // toggleVisibility('#panels')
     // toggleVisibility('#comments')   
 }
-if(location.pathname.startsWith('/shorts')){
+if(location.pathname.startsWith('/shorts/')){
     for(var i=1; i<=9; i++) {
-        toggleVisibility(`#${i}`)
+      //TODO: fix this  
     }
 }
 },500)
