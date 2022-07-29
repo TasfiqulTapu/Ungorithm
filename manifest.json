@@ -1,0 +1,39 @@
+{
+
+    "manifest_version": 2,
+    "name": "Ungorithm",
+    "version": "1.0",
+  
+    "description": "Stop starting doom scrolling.",
+  
+    "icons": {
+      "48": "icons/icon.svg"
+    },
+  
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "ungorithm@example.com"
+        }
+      },
+      
+    "browser_action": {
+      "default_icon": {
+        "19": "button/icon.svg",
+        "38": "button/icon.svg"
+      },
+      "default_title": "Reload"
+    },
+      
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["yt.js"]
+      }
+    ],
+    "background": {
+        "scripts": ["bg.js"]
+    }
+  
+  }
+  
